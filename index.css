@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    font-family: jost;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+.menu{
+    background: #050505;
+    color: azure;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.navs ul{
+    display: flex;
+    list-style-type: none;
+    
+    
+}
+.navs ul li{
+    padding: 0 25px;
+    font-size: 1.2rem;
+    
+    
+}
+.navs ul li:hover{
+    font-weight: bolder;
+    box-shadow: 0 0 30px #f2f2f2;
+    transition: .4s ease;
+    cursor: pointer;
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.homeContainer{
+    background: linear-gradient(rgba(89, 89, 185, 0.5), rgba(89, 89, 185, 0.5)),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4dXjcPVqEPlrDNScJQ1AVfxwrYheL3wDAKw&s) no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    
+}
+
+.homeContainerContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+/* .homeContainer{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    
+} */
+.homeContainer h2{
+    font-size: 3.5rem;
+    text-align: center;
+}
+.buttonDev button{
+    padding: 20px 80px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    
+}
+.buttonDev button:hover{
+    transition: .4s ease;
+    background: rgb(89, 89, 185, 0.5);
+    cursor: pointer;
+    transition: translateY(10px);
+    
+    
+
+}
+.menu img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.about{
+    background: rgba(1, 7, 0, 0.982); 
+    padding: 0; 
+    color: #fff;
+    
+}
+.about h2{
+    font-size: 2.5rem;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ padding: 20px;
+}
+
+.about h2, .about p{
+    text-align: center;
+}
+.about span{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.developerimage img {
+    width: 450px;
+}
+.abt-txt{
+display: flex;
+justify-content: space-evenly;
+}
+
+.abt-info{
+    display: flex;
+    justify-content: space-between;
+}
+.abt-info .left ul{
+    list-style: none;
+    line-height: 3;
+}
+.abt-info .right ul{
+    list-style: none;
+    line-height: 3;
+}
+.abt-info button{
+    background: transparent;
+    border: 2px solid rgb(red, rgb(231, 43, 43), rgb(249, 96, 14));
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 15px 0 0 0;
+    font-size: 17px;
+    font-weight: bold;
+ 
+}
+.button:hover{
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.cv-button a{
+    color: red;
+    text-decoration: none;
+}
+    
+.servicesContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.servicesContainer div{
+    background: #000;
+    color:#fff;
+    margin: 0 10px;
+    padding: 10px 20px ;
+    border-radius: 7px;
+    border: 1px solid #fff
+}
+.servicesContainer div.hover{
+    background: #9e3636;
+    cursor: pointer;
+    transform: rotate(5deg);
+    transition: 5s ease;
+    box-shadow: 0 0 50px #000;
+}
+.Portfolio{
+    padding: 50px 0;
+    background: #eee;
+    color: #fff;
+}
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0 0;
+}
+.projects div img{
+    width: 450px;
+}
+
+.MobileM{
+    text-align: center;
+    list-style: none;
+    text-decoration-color: #fff;
+    display: none;
+    
+}
+/* media querry for mobiles */
+@media screen and (min-width: 0) and (max-width: 750px){
+    .navs{
+        display: none;
+    }
+    .MobileM{
+        display: block;
+    }
+    .homeContainer{
+        text-align: center;
+    }
+    .buttonDev button{
+        margin: 0 5px;
+        padding: 20px 50px;
+    }
+    .abt-txt{
+        display: block;
+    }
+    .servicesContainer{
+        display: block;
+    }
+  }
+
+  /* media querry for ipads */
+  @media screen and (min-width: 760px) and (max-width: 1024px){
+    .menuBar{
+        background: #f6cfcf;
+    }
+    .projects div{
+        text-align: center;
+        width: 100%;
+
+    }
+    .servicesContainer div{
+        margin: 20px 0;
+    }
+    .developerimage{
+        width: 100%;
+    }
+    .homeContainer h2{
+        font-size: 2rem;
+    }
+  }
+
+  .animate{
+    animation: loader 4s linear infinite;
+  }
+  @keyframes loader {
+    0%{
+        transform: scale(0);
+        filter:saturate(0%);
+    }
+    50%, 100%{
+        transform: scale(1.1);
+        filter:saturate(50%);
+    }
+}
